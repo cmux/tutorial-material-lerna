@@ -1,0 +1,26 @@
+{
+    "name": "koot-tutorial-lerna-package-b",
+    "description": "Koot tutorial: Using Lerna (Package B)",
+    "private": true,
+    "scripts": {
+    },
+    "author": {
+        "name": "diablohu",
+        "email": "diablohudream@gmail.com",
+        "url": "http://diablohu.com"
+    },
+    "bugs": {
+        "url": "https://github.com/cmux/tutorial-material-lerna/issues"
+    },
+    "homepage": "https://github.com/cmux/tutorial-material-lerna",
+    "engines": {
+        "node": ">=8.0.0"
+    },
+    "license": "Apache-2.0",
+    "dependencies": {
+        "koot-tutorial-lerna-package-a": "latest"
+    },
+    "devDependencies": {
+        "koot-tutorial-lerna": "latest"
+    }
+}

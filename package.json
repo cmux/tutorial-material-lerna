@@ -1,0 +1,57 @@
+{
+    "name": "koot-tutorial-lerna-packages",
+    "description": "Koot tutorial: Using Lerna",
+    "private": true,
+    "scripts": {
+        "bootstrap": "npm i --no-save && lerna bootstrap --hoist",
+        "publish": "lerna publish"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cmux/tutorial-material-lerna"
+    },
+    "keywords": [
+        "lerna"
+    ],
+    "author": {
+        "name": "diablohu",
+        "email": "diablohudream@gmail.com",
+        "url": "http://diablohu.com"
+    },
+    "bugs": {
+        "url": "https://github.com/cmux/tutorial-material-lerna/issues"
+    },
+    "homepage": "https://github.com/cmux/tutorial-material-lerna",
+    "engines": {
+        "node": ">=8.0.0"
+    },
+    "license": "Apache-2.0",
+    "devDependencies": {
+        "lerna": "3.13.4",
+        "lerna-wizard": "1.0.9",
+        "eslint": "5.16.0",
+        "eslint-config-koot": "0.1.0",
+        "prettier": "1.17.0",
+        "husky": "2.2.0",
+        "lint-staged": "8.1.6"
+    },
+    "eslintIgnore": [
+        "node_modules/**/*"
+    ],
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "eslint --fix",
+            "prettier --write",
+            "git add"
+        ],
+        "*.{json,md}": [
+            "prettier --write",
+            "git add"
+        ]
+    }
+}
